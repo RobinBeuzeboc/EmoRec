@@ -4,8 +4,6 @@ that uses the dataset in ../data/dataset to train it (CK/CK+ dataset)
 
 The facial recognition uses facial landmarks to detect emotions.
 
-See also:
-    http://www.paulvangent.com/2016/08/05/emotion-recognition-using-facial-landmarks/
 """
 import glob
 import random

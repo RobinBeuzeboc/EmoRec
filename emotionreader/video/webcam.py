@@ -40,8 +40,7 @@ def predict_from_webcam(args):
     for frame in get_webcam_video(width, height):
         handler = FrameHandler(frame)
 
-        if args.landmarks:
-            handler.draw_landmarks()
+
 
         faces = np.array([handler.get_vectorized_landmarks()])
         if faces[0] is not None:
@@ -49,13 +48,13 @@ def predict_from_webcam(args):
             if len(prediction) > 0:
                 text = emotions[prediction[0]]
                 cv2.putText(handler.frame, text, (40, 40),
-                cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255),
-                thickness=2)
+                cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255),
+                thickness=1)
 
 
             '''    if text == 'disgust'
                     text = ''
-                    cv2.putText(handler.frame,'oui', ())
+                    cv2.putText()
                     lancer script oeil ici
                     '''
 

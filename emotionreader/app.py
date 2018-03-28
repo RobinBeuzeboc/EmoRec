@@ -47,11 +47,9 @@ def get_parser():
                                           'detection from the command line')
     parser_webcam.add_argument('-d', '--dimensions', dest='dimensions',
                                action=parse_actions.DimensionAction,
-                               default=(640, 480), help='the width and height '
+                               default=(640, 640), help='the width and height '
                                'to start the webcam with')
-    parser_webcam.add_argument('-l', '--landmarks', dest='landmarks',
-                               action='store_true',
-                               help='draw the facial landmarks on the frame')
+
     parser_webcam.set_defaults(func=predict_from_webcam)
 
     # Subcommand for predicting video from file
