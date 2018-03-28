@@ -18,6 +18,14 @@ If you want to try it with python 2.7, then you'll need those libraries:
 - Numpy (`pip install numpy`)
 - OpenCV (2.4.13)
 
+OR
+- Python 3.6
+- Dlib (19.6 but 19.7 should be fine)
+- Opencv (3.2 or 3.4)
+- Boost (1.65.1)
+- SKLearn (`pip install sklearn`)
+- Numpy (`pip install numpy`)
+
 You can run it on windows, but this readme will only cover the "linux" install version
 
 Building Dlib is fairly straightforward. It basically requires the C++ Boost library to be build, and then you can build Dlib and install it for Python. If everything installed correctly, but you still get an `ImportError` when importing dlib, running `sudo ldconfig` might solve this.
@@ -61,7 +69,8 @@ Open a new Python interpreter session, and try `import cv2` again.
 
 ## Usage
 
-Once all the above requirements are met, you can try it out. Some functionality, such as sorting and preparing of the dataset, requires there to be a dataset. We used the Cohn-Kanade extended (CK+) dataset.
+Once all the above requirements are met, you can try it out. Some functionality, such as sorting and preparing of the dataset, requires there to be a dataset. We used the Cohn-Kanade extended (CK+) dataset. http://www.consortium.ri.cmu.edu/ckagree/
+ http://www.paulvangent.com/2016/04/01/emotion-recognition-with-python-opencv-and-a-face-dataset/ for more infos on how to create a trained model (great explanations)
 
 Example usage:
 ```bash
@@ -92,6 +101,11 @@ optional arguments:
 ```
 
 # Citations
+
 - Lucey, P., Cohn, J. F., Kanade, T., Saragih, J., Ambadar, Z., & Matthews, I. (2010). The Extended Cohn-Kanade Dataset (CK+): A complete expression dataset for action unit and emotion-specified expression. Proceedings of the Third International Workshop on CVPR for Human Communicative Behavior Analysis (CVPR4HB 2010), San Francisco, USA, 94-101.
 - van Gent, P. (2016). Emotion Recognition Using Facial Landmarks, Python, DLib and OpenCV. A tech blog about fun things with Python and embedded electronics. Retrieved from: http://www.paulvangent.com/2016/08/05/emotion-recognition-using-facial-landmarks/
 - Kanade, T., Cohn, J. F., & Tian, Y. (2000). Comprehensive database for facial expression analysis. Proceedings of the Fourth IEEE International Conference on Automatic Face and Gesture Recognition (FG'00), Grenoble, France, 46-53.
+
+if you're interested to install it on raspberry:
+- https://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/
+- https://www.pyimagesearch.com/2017/05/01/install-dlib-raspberry-pi/
